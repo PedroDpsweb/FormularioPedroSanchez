@@ -1,3 +1,5 @@
+window.onload{
+
 var xhttp = new XMLHttpRequest();
 
 xhttp.onreadystatechange = function() {
@@ -10,4 +12,6 @@ xhttp.send();
 
 function gestionarXml(dadesXml){
 var xmlDoc = dadesXml.responseXML;
+}
+
 }
