@@ -1,0 +1,79 @@
+body{
+  font-family: 'Oswald', sans-serif;
+  padding:0;
+  color:white;
+  margin:0;
+  background-color:#141617;
+  /*background-image:url(http://whataftercollege.com/wp-content/uploads/2017/05/Exam-Questions-Bubble-Sheet-and-Pencil-e1421955317694.jpg);*/
+  background-repeat:norepeat;
+  background-attachment:fixed;
+  background-size:cover;
+}
+
+#wrapper{
+  
+  heith:100%;
+  width:80%;
+  padding:50px;
+  border:solid orange 2px;
+  background-color:#34383a;
+  -webkit-box-shadow: 28px 9px 56px 12px rgba(0,0,0,0.75);
+-moz-box-shadow: 28px 9px 56px 12px rgba(0,0,0,0.75);
+box-shadow: 28px 9px 56px 12px rgba(0,0,0,0.75);
+  margin:0 auto;
+  text-align: center;
+
+}
+
+.pregunta{
+  width:100px;
+  margin:10px auto;
+  text-align:left;
+}
+
+.pregunta1{
+  width:500px;
+  margin:10px auto;
+  text-align:left;
+}
+
+.par{
+  padding:20px 0;
+  
+-webkit-box-shadow: inset 10px 10px 51px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 10px 10px 51px -1px rgba(0,0,0,0.75);
+box-shadow: inset 10px 10px 51px -1px rgba(0,0,0,0.75);
+  -webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
+  
+}
+.impar{
+  padding:20px 0;
+  margin: 50px;
+  
+-webkit-box-shadow: 10px 10px 69px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 69px -3px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 69px -3px rgba(0,0,0,0.75);
+
+  -webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
+  
+}
+  
+  #enviar{
+    background-color:orange;
+    border:none;
+    padding:20px;
+    -webkit-border-radius: 85px;
+-moz-border-radius: 85px;
+border-radius: 85px;
+    font-size:30px;
+    font-weight:bold;
+  -webkit-box-shadow: 10px 10px 22px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 22px -1px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 22px -1px rgba(0,0,0,0.75);
+    margin-top:50px;
+  
+}
