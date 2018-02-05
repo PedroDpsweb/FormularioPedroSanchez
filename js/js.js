@@ -15,3 +15,16 @@ var xmlDoc = dadesXml.responseXML;
 }
 
 }
+
+
+//NUMBER
+ //Recuperamos el título y la respuesta correcta de Input, guardamos el número secreto
+ var tituloInput=xmlDoc.getElementsByTagName("title")[0].innerHTML;
+ ponerDatosInputHtml(tituloInput);
+ numeroSecreto=parseInt(xmlDoc.getElementsByTagName("answer")[0].innerHTML);
+
+//----------------------------------------------------
+// poner los datos recibios en el HTML
+function ponerDatosInputHtml(t){
+    document.getElementById("tituloInput").innerHTML = t;
+   }
