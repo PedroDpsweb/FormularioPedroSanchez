@@ -51,6 +51,7 @@ border-radius: 20px;
 .impar{
   padding:20px 0;
   margin: 50px;
+  text-align: center;
   
 -webkit-box-shadow: 10px 10px 69px -3px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 69px -3px rgba(0,0,0,0.75);
@@ -76,4 +77,11 @@ border-radius: 85px;
 box-shadow: 10px 10px 22px -1px rgba(0,0,0,0.75);
     margin-top:50px;
   
+}
+
+.respuesta{
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  margin: 20px auto;
 }
