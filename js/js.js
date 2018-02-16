@@ -1,3 +1,7 @@
+var r1 = [];
+
+
+
 window.onload = function () {
 
   /*var xhttp = new XMLHttpRequest();
@@ -50,6 +54,7 @@ window.onload = function () {
       var sel = document.getElementsByTagName("select")[j];
       for (var i = 0; i < nopt; i++) {
         var opt = document.createElement("option");
+
         opt.value = i + 1;
         opt.text = object.questions.question[inicio].option[i];
         sel.appendChild(opt);
@@ -109,196 +114,250 @@ window.onload = function () {
     }
 
 
+    //LLENAR ARRAY
+    for (var i = 0; i < 10; i++) {
+      r1.push(object.questions.question[i].answer);
+    }
+
+
+
 
     function respuesta(dadesJson) {
-      
-      
-      for(var i=0;i<10;i++){
+
+
+      for (var i = 0; i < 4; i++) {
+        var comparar1 = document.getElementsByClassName("respuesta")[i].value;
+        var comparar2 = object.questions.question[i].answer;
+        if (comparar1 == comparar2) {
+          document.getElementsByClassName("resultado")[i].style.backgroundColor = "green";
+        } else {
+          document.getElementsByClassName("resultado")[i].style.backgroundColor = "red";
+        }
+
+      }
+
+      for (var i = 8; i < 10; i++) {
         var comparar1 = document.getElementsByClassName("respuesta")[i].innerHTML;
         var comparar2 = object.questions.question[i].answer;
-        if(comparar1==comparar2){
-          document.getElementsByClassName("respuesta")[i].style.backgroundColor="green";
-        }else{
-          document.getElementsByClassName("respuesta")[i].style.backgroundColor="red";
+        if (comparar1 == comparar2) {
+          document.getElementsByClassName("resultado")[i].style.backgroundColor = "green";
+        } else {
+          document.getElementsByClassName("resultado")[i].style.backgroundColor = "red";
         }
-  
+
+      }
+
+
+      //if()
+
+    }
+    //respuesta();
+
+
+    function input() {
+      var respuesta = document.getElementsByClassName("respuesta")[0].value;
+      var comparar2 = object.questions.question[0].answer;
+      if (respuesta == comparar2) {
+        document.getElementsByClassName("resultado")[0].style.backgroundColor = "green";
+      } else {
+        document.getElementsByClassName("resultado")[0].style.backgroundColor = "red";
+      }
+
+    }
+
+
+
+
+    // AQUI ACABA JSON CON SERVIDOR ----------------------------------------
+
+    //AQUI EMPIEZA JSON SIN SERVER-----------------------------------------
+    /*var textJSON = 
+    {
+        "questions": {
+          "question": [
+            {
+              "-id": "profe001",
+              "type": "text",
+              "title": "¿ A qué asignatura nos referimmos si hablamos de SQL ?",
+              "answer": "Base de datos"
+            },
+            {
+              "-id": "profe002",
+              "type": "text",
+              "title": "¿ Qué dos partes principales tiene un HTML ?",
+              "answer": "Head y Body"
+            },
+            {
+              "-id": "profe003",
+              "type": "select",
+              "title": "¿ Cuantas preguntas ponen en los exámenes de bases de datos ?",
+              "option": [
+                "1",
+                "5",
+                "10",
+                "15",
+                "20"
+              ],
+              "answer": "2"
+            },
+            {
+              "-id": "profe004",
+              "type": "select",
+              "title": "¿ Como se llama éste instituto ?",
+              "option": [
+                "San josep Obrer",
+                "Francesc de Borjamoll",
+                "San Vicente de Paul",
+                "La Salle",
+                "Ninguna de las anteriores"
+              ],
+              "answer": "1"
+            },
+            {
+              "-id": "profe005",
+              "type": "multiple",
+              "title": "¿ Que lenguajes de progrmaación hemos dado este curso ?",
+              "option": [
+                "Python",
+                "Java",
+                "Javascript",
+                "HTML",
+                "CSS"
+              ],
+              "answer": [
+                "0",
+                "1",
+                "2"
+              ]
+            },
+            {
+              "-id": "profe006",
+              "type": "multiple",
+              "title": " Para Lunar lander necesitamos usar :",
+              "option": [
+                "HTML",
+                "CSS",
+                "JS",
+                "Jquery",
+                "Python",
+                "Boostrap"
+              ],
+              "answer": [
+                "0",
+                "1",
+                "3"
+              ]
+            },
+            {
+              "-id": "profe007",
+              "type": "checkbox",
+              "title": " Formas de aprender a programar:",
+              "option": [
+                "clases",
+                "píldoras informáticas",
+                "jugarndo al Lol",
+                "Quedando con la novia",
+                "En el bar"
+              ],
+              "answer": [
+                "0",
+                "1",
+                "4"
+              ]
+            },
+            {
+              "-id": "profe008",
+              "type": "checkbox",
+              "title": "¿ Que crees que te pasará al acabar las clases ?",
+              "option": [
+                "Valorarás tu vida social",
+                "Te darán trabajo",
+                "Olvidarás todo lo que sabes",
+                "Cambiarás de gremio",
+                "Seguirás estudiando"
+              ],
+              "answer": [
+                "0",
+                "2"
+              ]
+            },
+            {
+              "-id": "profe009",
+              "type": "radio",
+              "title": "¿ Que pasará si repites curso ?",
+              "option": [
+                "Te deprimirás",
+                "Te pondrás muy contento",
+                "Dejarás el curso",
+                "Aprovarás mas facil a la próxima"
+              ],
+              "answer": "3"
+            },
+            {
+              "-id": "profe010",
+              "type": "radio",
+              "title": "¿ que te ha parecido este formulário ?",
+              "option": [
+                "Lo peor",
+                "No está mal",
+                "Está bien",
+                "Es lo mejor",
+                "Me da bastante igual"
+              ],
+              "answer": "4"
+            }
+          ]
+        }
       }
       
+    var object = JSON.parse(textJSON);
+      
+    document.getElementById("p1").innerHTML = object.pregunta[0].titol;
+    document.getElementById("t1").innerHTML = object.pregunta[0].tipus;
+    document.getElementById("r1").innerHTML = object.pregunta[0].resposta;*/
+
+    // AQUI ACABA JSON SIN SERVER-------------------------------------------------------
+    //
+    //NUMBER
+    //Recuperamos el título y la respuesta correcta de Input, guardamos el número secreto
+    // var tituloInput=xmlDoc.getElementsByTagName("title")[0].innerHTML;
+    // ponerDatosInputHtml(tituloInput);
+    //numeroSecreto=parseInt(xmlDoc.getElementsByTagName("answer")[0].innerHTML);
+
+    //----------------------------------------------------
+    // poner los datos recibios en el HTML
+    //function ponerDatosInputHtml(t){
+    //   document.getElementById("tituloInput").innerHTML = t;
+    //  }
+
+
+  }
+
+}
+
+function prueba() {
+  var contador = 0;
   
-      //if()
-  
+  for (var i = 0; 1 < 4; i++) {
+    var hola = document.getElementsByClassName("respuesta")[i].value;
+    var adios = r1[i];
+    document.getElementById("contador").innerHTML = "Número de aciertos: "+contador;
+    if (hola == adios) {
+      document.getElementsByClassName("resultado")[i].style.backgroundColor = "green";
+      contador++;
+
+    } else {
+      document.getElementsByClassName("resultado")[i].style.backgroundColor = "red";
+
     }
-    respuesta();
 
 
 
   }
 
   
-  
-  
 
 
 
-  // AQUI ACABA JSON CON SERVIDOR ----------------------------------------
 
-  //AQUI EMPIEZA JSON SIN SERVER-----------------------------------------
-  /*var textJSON = 
-  {
-      "questions": {
-        "question": [
-          {
-            "-id": "profe001",
-            "type": "text",
-            "title": "¿ A qué asignatura nos referimmos si hablamos de SQL ?",
-            "answer": "Base de datos"
-          },
-          {
-            "-id": "profe002",
-            "type": "text",
-            "title": "¿ Qué dos partes principales tiene un HTML ?",
-            "answer": "Head y Body"
-          },
-          {
-            "-id": "profe003",
-            "type": "select",
-            "title": "¿ Cuantas preguntas ponen en los exámenes de bases de datos ?",
-            "option": [
-              "1",
-              "5",
-              "10",
-              "15",
-              "20"
-            ],
-            "answer": "2"
-          },
-          {
-            "-id": "profe004",
-            "type": "select",
-            "title": "¿ Como se llama éste instituto ?",
-            "option": [
-              "San josep Obrer",
-              "Francesc de Borjamoll",
-              "San Vicente de Paul",
-              "La Salle",
-              "Ninguna de las anteriores"
-            ],
-            "answer": "1"
-          },
-          {
-            "-id": "profe005",
-            "type": "multiple",
-            "title": "¿ Que lenguajes de progrmaación hemos dado este curso ?",
-            "option": [
-              "Python",
-              "Java",
-              "Javascript",
-              "HTML",
-              "CSS"
-            ],
-            "answer": [
-              "0",
-              "1",
-              "2"
-            ]
-          },
-          {
-            "-id": "profe006",
-            "type": "multiple",
-            "title": " Para Lunar lander necesitamos usar :",
-            "option": [
-              "HTML",
-              "CSS",
-              "JS",
-              "Jquery",
-              "Python",
-              "Boostrap"
-            ],
-            "answer": [
-              "0",
-              "1",
-              "3"
-            ]
-          },
-          {
-            "-id": "profe007",
-            "type": "checkbox",
-            "title": " Formas de aprender a programar:",
-            "option": [
-              "clases",
-              "píldoras informáticas",
-              "jugarndo al Lol",
-              "Quedando con la novia",
-              "En el bar"
-            ],
-            "answer": [
-              "0",
-              "1",
-              "4"
-            ]
-          },
-          {
-            "-id": "profe008",
-            "type": "checkbox",
-            "title": "¿ Que crees que te pasará al acabar las clases ?",
-            "option": [
-              "Valorarás tu vida social",
-              "Te darán trabajo",
-              "Olvidarás todo lo que sabes",
-              "Cambiarás de gremio",
-              "Seguirás estudiando"
-            ],
-            "answer": [
-              "0",
-              "2"
-            ]
-          },
-          {
-            "-id": "profe009",
-            "type": "radio",
-            "title": "¿ Que pasará si repites curso ?",
-            "option": [
-              "Te deprimirás",
-              "Te pondrás muy contento",
-              "Dejarás el curso",
-              "Aprovarás mas facil a la próxima"
-            ],
-            "answer": "3"
-          },
-          {
-            "-id": "profe010",
-            "type": "radio",
-            "title": "¿ que te ha parecido este formulário ?",
-            "option": [
-              "Lo peor",
-              "No está mal",
-              "Está bien",
-              "Es lo mejor",
-              "Me da bastante igual"
-            ],
-            "answer": "4"
-          }
-        ]
-      }
-    }
-    
-  var object = JSON.parse(textJSON);
-    
-  document.getElementById("p1").innerHTML = object.pregunta[0].titol;
-  document.getElementById("t1").innerHTML = object.pregunta[0].tipus;
-  document.getElementById("r1").innerHTML = object.pregunta[0].resposta;*/
-
-  // AQUI ACABA JSON SIN SERVER-------------------------------------------------------
-  //
-  //NUMBER
-  //Recuperamos el título y la respuesta correcta de Input, guardamos el número secreto
-  // var tituloInput=xmlDoc.getElementsByTagName("title")[0].innerHTML;
-  // ponerDatosInputHtml(tituloInput);
-  //numeroSecreto=parseInt(xmlDoc.getElementsByTagName("answer")[0].innerHTML);
-
-  //----------------------------------------------------
-  // poner los datos recibios en el HTML
-  //function ponerDatosInputHtml(t){
-  //   document.getElementById("tituloInput").innerHTML = t;
-  //  }
 }

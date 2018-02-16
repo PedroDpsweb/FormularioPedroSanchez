@@ -9,50 +9,51 @@
 
 <body>
   <div id='wrapper'>
-    <form>
+    <form onsubmit="return false">
 
       <h1>Exámen Formulários</h1>
 
 
       <div class="impar">
         <h2 id="p1"></h2>
-        Respuesta: <input type="text" name="a1" value=><br>
-        <div class="respuesta">Base de datos</div>
+        Respuesta: <input class="respuesta" type="text" name="a1" placeholder="Escribe tu respuesta"value="Base de datos"><br>
+        
+        <div id="a" class="resultado"></div>
       </div>
 
 
       <div class="impar">
         <h2 id="p2"></h2>
-        Respuesta: <input type="text" name="a1" value=><br>
-        <div class="respuesta">0</div>
+        Respuesta: <input class="respuesta" type="text" name="a1" value=""><br>
+        <div class="resultado"></div>
       </div>
       <div class="impar">
         <h2 id="p3"></h2>
-        <select id="" name="coches">
+        <select class="respuesta" id="" name="coches">
             
           </select>
-          <div class="respuesta">0</div>
+          <div class="resultado"></div>
       </div>
       <div class="impar">
         <h2 id="p4"></h2>
-        <select id="" name="coches">
+        <select  class="respuesta" id="" name="coches">
           
         </select>
-        <div class="respuesta">0</div>
+        <div class="resultado"></div>
       </div>
       <div class="impar">
         <h2 id="p5"></h2>
         <select id="elmeuselect" name="coches" multiple>
           
         </select>
-        <div class="respuesta">0</div>
+        <div class="resultado"></div>
       </div>
       <div class="impar">
         <h2 id="p6"></h2>
         <select id="elmeuselect" name="coches" multiple>
           
         </select>
-        <div class="respuesta">0</div>
+        <div class="resultado"></div>
       </div>
       <div class="impar">
         <h2 id="p7"></h2>
@@ -66,7 +67,7 @@
 <label class="check" for="g"></label><br/>
 <input type="checkbox" id="b" value="blue">
 <label class="check" for="b"></label><br/>
-<div class="respuesta">0</div>
+<div class="resultado"></div>
 
       </div>
       <div class="impar">
@@ -81,7 +82,7 @@
 <label class="check2" for="g"></label><br/>
 <input type="checkbox" id="b" value="blue">
 <label class="check2" for="b"></label><br/>
-<div class="respuesta">0</div>
+<div class="resultado"></div>
 
       </div>
       <div class="impar">
@@ -94,7 +95,7 @@
 <label class="radio" for="blue"></label><br/>
 <input id="blue" type="radio" name="color" value="blue">
 <label class="radio" for="blue"></label><br/>
-<div class="respuesta">0</div>
+<div class="resultado"></div>
       </div>
       <div class="impar">
           <h2 id="p10"></h2>
@@ -106,15 +107,19 @@
 <label class="radio2" for="blue"></label><br/>
 <input id="blue" type="radio" name="color" value="blue">
 <label class="radio2" for="blue"></label><br/>
-<div class="respuesta">0</div>
+<div class="resultado"></div>
       </div>
+
+      <button class="boton" onclick="prueba()">Pulsa</button>
+      <input onclick="prueba()" type="submit" value="Submit">
+      <div id="contador"></div>
+
         </div>
 
 
 
 
-
-
+        
     </form>
   </div>
 

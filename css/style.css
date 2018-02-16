@@ -79,9 +79,27 @@ box-shadow: 10px 10px 22px -1px rgba(0,0,0,0.75);
   
 }
 
-.respuesta{
+.resultado{
   height: 50px;
   width: 50px;
   background-color: black;
   margin: 20px auto;
+  border: solid black 1px;
+}
+
+.boton{
+  height: 50px;
+  width: 70px;
+  background-color: red;
+  margin-top: 10px;
+  font-weight:bold;
+  font-size: 20px; 
+  
+}
+
+#contador{
+  height: 100px;
+  width: 100px;
+  margin:15px auto;
+  font-size: 25px;
 }
