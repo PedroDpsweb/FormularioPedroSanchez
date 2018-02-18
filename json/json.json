@@ -86,9 +86,9 @@
           "En el bar"
         ],
         "answer": [
+          "0",
           "1",
-          "2",
-          "5"
+          "4"
         ]
       },
       {
@@ -103,8 +103,8 @@
           "Seguirás estudiando"
         ],
         "answer": [
-          "2",
-          "5"
+          "1",
+          "4"
         ]
       },
       {
@@ -117,7 +117,7 @@
           "Dejarás el curso",
           "Aprovarás mas facil a la próxima"
         ],
-        "answer": "4"
+        "answer": "3"
       },
       {
         "-id": "profe010",
@@ -130,7 +130,7 @@
           "Es lo mejor",
           "Me da bastante igual"
         ],
-        "answer": "5"
+        "answer": "4"
       }
     ]
   }
