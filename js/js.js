@@ -26,7 +26,7 @@ window.onload = function () {
 
   //----- ESTO ES DE JSON CON SERVIDOR ------------------------------------------------
   // fichoro xml que está en el servidor rawgit
-  var url = "https://rawgit.com/PedroDpsweb/FormularioPedroSanchez/master/json/json.json";
+  var url = "https://cdn.rawgit.com/PedroDpsweb/FormularioPedroSanchez/9b370c87/json/json.json";
 
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
