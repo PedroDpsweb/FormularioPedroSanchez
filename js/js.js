@@ -1,4 +1,7 @@
 var r1 = [];
+var r2 = [];
+var solucionesc2 = [];
+var r3 = [];
 
 
 
@@ -115,9 +118,17 @@ window.onload = function () {
 
 
     //LLENAR ARRAY
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 6; i++) {
       r1.push(object.questions.question[i].answer);
     }
+
+    r2.push(object.questions.question[6].answer);
+    solucionesc2.push(object.questions.question[7].answer);
+
+    for (j = 8; j < 10; j++) {
+      r3.push(object.questions.question[j].answer);
+    }
+
 
 
 
@@ -166,182 +177,21 @@ window.onload = function () {
     }
 
 
-
-
-    // AQUI ACABA JSON CON SERVIDOR ----------------------------------------
-
-    //AQUI EMPIEZA JSON SIN SERVER-----------------------------------------
-    /*var textJSON = 
-    {
-        "questions": {
-          "question": [
-            {
-              "-id": "profe001",
-              "type": "text",
-              "title": "¿ A qué asignatura nos referimmos si hablamos de SQL ?",
-              "answer": "Base de datos"
-            },
-            {
-              "-id": "profe002",
-              "type": "text",
-              "title": "¿ Qué dos partes principales tiene un HTML ?",
-              "answer": "Head y Body"
-            },
-            {
-              "-id": "profe003",
-              "type": "select",
-              "title": "¿ Cuantas preguntas ponen en los exámenes de bases de datos ?",
-              "option": [
-                "1",
-                "5",
-                "10",
-                "15",
-                "20"
-              ],
-              "answer": "2"
-            },
-            {
-              "-id": "profe004",
-              "type": "select",
-              "title": "¿ Como se llama éste instituto ?",
-              "option": [
-                "San josep Obrer",
-                "Francesc de Borjamoll",
-                "San Vicente de Paul",
-                "La Salle",
-                "Ninguna de las anteriores"
-              ],
-              "answer": "1"
-            },
-            {
-              "-id": "profe005",
-              "type": "multiple",
-              "title": "¿ Que lenguajes de progrmaación hemos dado este curso ?",
-              "option": [
-                "Python",
-                "Java",
-                "Javascript",
-                "HTML",
-                "CSS"
-              ],
-              "answer": [
-                "0",
-                "1",
-                "2"
-              ]
-            },
-            {
-              "-id": "profe006",
-              "type": "multiple",
-              "title": " Para Lunar lander necesitamos usar :",
-              "option": [
-                "HTML",
-                "CSS",
-                "JS",
-                "Jquery",
-                "Python",
-                "Boostrap"
-              ],
-              "answer": [
-                "0",
-                "1",
-                "3"
-              ]
-            },
-            {
-              "-id": "profe007",
-              "type": "checkbox",
-              "title": " Formas de aprender a programar:",
-              "option": [
-                "clases",
-                "píldoras informáticas",
-                "jugarndo al Lol",
-                "Quedando con la novia",
-                "En el bar"
-              ],
-              "answer": [
-                "0",
-                "1",
-                "4"
-              ]
-            },
-            {
-              "-id": "profe008",
-              "type": "checkbox",
-              "title": "¿ Que crees que te pasará al acabar las clases ?",
-              "option": [
-                "Valorarás tu vida social",
-                "Te darán trabajo",
-                "Olvidarás todo lo que sabes",
-                "Cambiarás de gremio",
-                "Seguirás estudiando"
-              ],
-              "answer": [
-                "0",
-                "2"
-              ]
-            },
-            {
-              "-id": "profe009",
-              "type": "radio",
-              "title": "¿ Que pasará si repites curso ?",
-              "option": [
-                "Te deprimirás",
-                "Te pondrás muy contento",
-                "Dejarás el curso",
-                "Aprovarás mas facil a la próxima"
-              ],
-              "answer": "3"
-            },
-            {
-              "-id": "profe010",
-              "type": "radio",
-              "title": "¿ que te ha parecido este formulário ?",
-              "option": [
-                "Lo peor",
-                "No está mal",
-                "Está bien",
-                "Es lo mejor",
-                "Me da bastante igual"
-              ],
-              "answer": "4"
-            }
-          ]
-        }
-      }
-      
-    var object = JSON.parse(textJSON);
-      
-    document.getElementById("p1").innerHTML = object.pregunta[0].titol;
-    document.getElementById("t1").innerHTML = object.pregunta[0].tipus;
-    document.getElementById("r1").innerHTML = object.pregunta[0].resposta;*/
-
-    // AQUI ACABA JSON SIN SERVER-------------------------------------------------------
-    //
-    //NUMBER
-    //Recuperamos el título y la respuesta correcta de Input, guardamos el número secreto
-    // var tituloInput=xmlDoc.getElementsByTagName("title")[0].innerHTML;
-    // ponerDatosInputHtml(tituloInput);
-    //numeroSecreto=parseInt(xmlDoc.getElementsByTagName("answer")[0].innerHTML);
-
-    //----------------------------------------------------
-    // poner los datos recibios en el HTML
-    //function ponerDatosInputHtml(t){
-    //   document.getElementById("tituloInput").innerHTML = t;
-    //  }
-
-
   }
 
 }
 
-function prueba() {
+function resolver1() {
   var contador = 0;
-  
-  for (var i = 0; 1 < 4; i++) {
+  var aciertocheck = 0;
+  var fallocheck = 0;
+  var aciertocheck1 = 0;
+  var fallocheck1 = 0;
+
+  for (var i = 0; i < 4; i++) {
     var hola = document.getElementsByClassName("respuesta")[i].value;
     var adios = r1[i];
-    document.getElementById("contador").innerHTML = "Número de aciertos: "+contador;
+
     if (hola == adios) {
       document.getElementsByClassName("resultado")[i].style.backgroundColor = "green";
       contador++;
@@ -354,10 +204,141 @@ function prueba() {
 
 
   }
+  //radiobutton1
+  for (var i = 0; i < 4; i++) {
+    var xec=document.getElementsByClassName("radior")[i].checked;
+    
+    
 
+    if(xec==true){
+      var hola = document.getElementsByClassName("radior")[i].value;
+      var adios = r3[0];
+      if (hola == adios) {
+        document.getElementsByClassName("resultado")[8].style.backgroundColor = "green";
+        contador++;
   
+      } else {
+        document.getElementsByClassName("resultado")[8].style.backgroundColor = "red";
+  
+      }
+  
+    }
+
+    
+
+
+  }
+
+  //radiobutton2
+  for (var i = 0; i < 5; i++) {
+    var xec=document.getElementsByClassName("radior2")[i].checked;
+    
+    
+
+    if(xec==true){
+      var hola = document.getElementsByClassName("radior2")[i].value;
+      var adios = r3[1];
+      if (hola == adios) {
+        document.getElementsByClassName("resultado")[9].style.backgroundColor = "green";
+        contador++;
+  
+      } else {
+        document.getElementsByClassName("resultado")[9].style.backgroundColor = "red";
+  
+      }
+  
+    }
+
+    
+
+
+  }
+
+  /*for (var i = 4; i < 6; i++) {
+    for (var j = 0; j < 5; j++) {
+      var m = 4;
+      var hola = document.getElementsByClassName("respuesta")[i].value[j];
+      var adios = r1[m];
+      var aux = 0;
+      m++;
+
+      if (hola == adios) {
+        var acierto = true;
+        aux++
+
+
+      }
+
+      if (aux = 3) {
+        document.getElementsByClassName("resultado")[i].style.backgroundColor = "green";
+        contador++;
+
+      } else {
+        document.getElementsByClassName("resultado")[i].style.backgroundColor = "red";
+
+      }
+
+      
+      
+
+    }
+
+
+    document.getElementById("contador").innerHTML = "Número de aciertos: " + contador;
 
 
 
+  }*/
 
+  //chechbox1
+  for (var i = 0; i < 5; i++) {
+    var resp = document.getElementsByClassName("check1")[i].checked;
+    var resp0 = document.getElementsByClassName("check1")[i].value;
+    if (resp == true) {
+      var ns = i.toString();
+      var n = r2[0].indexOf(ns);
+      if (n >= 0) {
+        aciertocheck++;
+      } else {
+        fallocheck++;
+      }
+
+    }
+
+    if (aciertocheck == 3 && fallocheck == 0) {
+      document.getElementsByClassName("resultado")[6].style.backgroundColor = "green";
+      contador++;
+    } else {
+      document.getElementsByClassName("resultado")[6].style.backgroundColor = "red";
+    }
+
+
+  }
+  //checkbox2
+  for (var i = 0; i < 5; i++) {
+    var resp = document.getElementsByClassName("check3")[i].checked;
+    var resp0 = document.getElementsByClassName("check3")[i].value;
+    if (resp == true) {
+      var ns = i.toString();
+      var n = solucionesc2[0].indexOf(ns);
+      if (n >= 0) {
+        aciertocheck1++;
+      } else {
+        fallocheck1++;
+      }
+      if (aciertocheck1 == 2 && fallocheck1 == 0) {
+        document.getElementsByClassName("resultado")[7].style.backgroundColor = "green";
+        contador++;
+      } else {
+        document.getElementsByClassName("resultado")[7].style.backgroundColor = "red";
+      }
+  
+    }
+
+    
+
+  }
+
+
+  document.getElementById("contador").innerHTML = contador;
 }
