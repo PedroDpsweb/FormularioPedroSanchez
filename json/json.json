@@ -5,13 +5,13 @@
         "-id": "profe001",
         "type": "text",
         "title": "¿ A qué asignatura nos referimmos si hablamos de SQL ?",
-        "answer": "Base de datos"
+        "answer": "base de datos"
       },
       {
         "-id": "profe002",
         "type": "text",
         "title": "¿ Qué dos partes principales tiene un HTML ?",
-        "answer": "Head y Body"
+        "answer": "head y body"
       },
       {
         "-id": "profe003",
@@ -42,7 +42,7 @@
       {
         "-id": "profe005",
         "type": "multiple",
-        "title": "¿ Que lenguajes de progrmaación hemos dado este curso ?",
+        "title": "¿ Que lenguajes de progrmación hemos dado este curso ?",
         "option": [
           "Python",
           "Java",

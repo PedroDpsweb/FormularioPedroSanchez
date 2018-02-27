@@ -2,6 +2,7 @@ var r1 = [];
 var r2 = [];
 var solucionesc2 = [];
 var r3 = [];
+var rm=[];
 
 
 
@@ -26,7 +27,7 @@ window.onload = function () {
 
   //----- ESTO ES DE JSON CON SERVIDOR ------------------------------------------------
   // fichoro xml que está en el servidor rawgit
-  var url = "https://cdn.rawgit.com/PedroDpsweb/FormularioPedroSanchez/9b370c87/json/json.json";
+  var url = "https://rawgit.com/PedroDpsweb/FormularioPedroSanchez/master/json/json.json";
 
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
@@ -58,7 +59,9 @@ window.onload = function () {
       for (var i = 0; i < nopt; i++) {
         var opt = document.createElement("option");
 
-        opt.value = i + 1;
+        //opt.value = i + 1;
+        opt.value = i;
+        opt.setAttribute("class","multiple");
         opt.text = object.questions.question[inicio].option[i];
         sel.appendChild(opt);
       }
@@ -129,6 +132,10 @@ window.onload = function () {
       r3.push(object.questions.question[j].answer);
     }
 
+    for (k=4;k<6;k++){
+      rm.push(object.questions.question[k].answer);
+    }
+
 
 
 
@@ -157,6 +164,7 @@ window.onload = function () {
         }
 
       }
+      
 
 
       //if()
@@ -187,6 +195,9 @@ function resolver1() {
   var fallocheck = 0;
   var aciertocheck1 = 0;
   var fallocheck1 = 0;
+  var aciertomul=0;
+  var aciertomul2=0;
+  var fallomul=0;
 
   for (var i = 0; i < 4; i++) {
     var hola = document.getElementsByClassName("respuesta")[i].value;
@@ -203,6 +214,57 @@ function resolver1() {
 
 
 
+  }
+  //MULTIPLE
+  for (var i = 10; i < 15; i++) {
+    var stoyaqui=document.getElementsByClassName("multiple")[i].innerHTML;
+    var seleccionado=document.getElementsByClassName("multiple")[i].selected;
+    if (seleccionado ==true){
+      var comparar1 = document.getElementsByClassName("multiple")[i].value;
+      var comparar2 = rm[0].indexOf(comparar1);
+      if (comparar1 == comparar2) {
+        aciertomul++;
+      } 
+    }
+    
+    else {
+      //document.getElementsByClassName("resultado")[4].style.backgroundColor = "red";
+      //fallomul++;
+    }
+
+  }
+
+  if (aciertomul == 3 /*&& fallomul == 0*/) {
+    document.getElementsByClassName("resultado")[4].style.backgroundColor = "green";
+    contador++;
+  } else {
+    document.getElementsByClassName("resultado")[4].style.backgroundColor = "red";
+  }
+
+  //MULTIPLE2
+  for (var i = 15; i < 20; i++) {
+    var stoyaqui=document.getElementsByClassName("multiple")[i].innerHTML;
+    var seleccionado=document.getElementsByClassName("multiple")[i].selected;
+    if (seleccionado ==true){
+      var comparar1 = document.getElementsByClassName("multiple")[i].value;
+      var comparar2 = rm[0].indexOf(comparar1);
+      if (comparar1 == comparar2) {
+        aciertomul2++;
+      } 
+    }
+    
+    else {
+      //document.getElementsByClassName("resultado")[4].style.backgroundColor = "red";
+      //fallomul++;
+    }
+
+  }
+
+  if (aciertomul2 == 3 /*&& fallomul == 0*/) {
+    document.getElementsByClassName("resultado")[5].style.backgroundColor = "green";
+    contador++;
+  } else {
+    document.getElementsByClassName("resultado")[5].style.backgroundColor = "red";
   }
   //radiobutton1
   for (var i = 0; i < 4; i++) {
@@ -340,5 +402,5 @@ function resolver1() {
   }
 
 
-  document.getElementById("contador").innerHTML = contador;
+  document.getElementById("contador").innerHTML = "Respuestas correctas : "+contador;
 }
