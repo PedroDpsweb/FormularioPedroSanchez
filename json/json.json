@@ -42,7 +42,7 @@
       {
         "-id": "profe005",
         "type": "multiple",
-        "title": "¿ Que lenguajes de progrmación hemos dado este curso ?",
+        "title": "¿ Qué lenguajes de progrmación hemos dado este curso ?",
         "option": [
           "Python",
           "Java",
@@ -94,7 +94,7 @@
       {
         "-id": "profe008",
         "type": "checkbox",
-        "title": "¿ Que crees que te pasará al acabar las clases ?",
+        "title": "¿ Qué crees que te pasará al acabar las clases ?",
         "option": [
           "Valorarás tu vida social",
           "Te darán trabajo",
@@ -110,7 +110,7 @@
       {
         "-id": "profe009",
         "type": "radio",
-        "title": "¿ Que pasará si repites curso ?",
+        "title": "¿ Qué pasará si repites curso ?",
         "option": [
           "Te deprimirás",
           "Te pondrás muy contento",
@@ -122,7 +122,7 @@
       {
         "-id": "profe010",
         "type": "radio",
-        "title": "¿ que te ha parecido este formulário ?",
+        "title": "¿ Qué te ha parecido este formulário ?",
         "option": [
           "Lo peor",
           "No está mal",
