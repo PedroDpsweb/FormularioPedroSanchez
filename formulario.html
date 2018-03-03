@@ -1,22 +1,25 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+  <title>Formulario autocorregible</title>
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah%7CKrona+One" rel="stylesheet">  
   <link href="css/style.css" rel="stylesheet" type="text/css">
   <script type="text/javascript" src="js/js.js"></script>
 </head>
 
 <body>
   <div id='wrapper'>
-    <form onsubmit="return false">
+    <form id="myForm" onsubmit="return false">
 
       <h1 id="hform">Exámen Formulários</h1>
 
 
       <div class="impar">
         <h2 id="p1"></h2>
-        Respuesta: <input class="respuesta" type="text" name="a1" placeholder="escribe en minusculas" value=""><br>
+        Respuesta: <input class="respuesta" type="text" name="a1" placeholder="escribe en minusculas" value="" required><br>
 
         <div id="a" class="resultado"></div>
       </div>
@@ -24,118 +27,119 @@
 
       <div class="impar">
         <h2 id="p2"></h2>
-        Respuesta: <input class="respuesta" type="text" name="a1" placeholder="escribe en minusculas" value=""><br>
+        Respuesta: <input class="respuesta" type="text" name="a1" placeholder="escribe en minusculas" value="" required><br>
         <div class="resultado"></div>
       </div>
       <div class="impar">
         <h2 id="p3"></h2>
-        <select class="respuesta" id="" name="coches">
+        <select class="respuesta" name="coches">
             
           </select>
         <div class="resultado"></div>
       </div>
       <div class="impar">
         <h2 id="p4"></h2>
-        <select class="respuesta" id="" name="coches">
+        <select class="respuesta" name="coches">
           
         </select>
         <div class="resultado"></div>
       </div>
       <div class="impar">
         <h2 id="p5"></h2>
-        <select class="respuesta" id="elmeuselect" name="coches" multiple>
+        <select class="respuesta" name="coches" multiple>
           
         </select>
         <div class="resultado"></div>
       </div>
       <div class="impar">
         <h2 id="p6"></h2>
-        <select id="elmeuselect" name="coches" multiple>
+        <select name="coches" multiple>
           
         </select>
         <div class="resultado"></div>
       </div>
       <div class="impar">
-        
+
         <h2 id="p7"></h2>
         <div class="ajustador">
-        <input class="check1" type="checkbox" name="checkbox" value="0">
-        <label class="check" for="r"></label><br/>
-        <input class="check1" type="checkbox" name="checkbox" value="1">
-        <label class="check" for="g"></label><br/>
-        <input class="check1" type="checkbox" name="checkbox" value="2">
-        <label class="check" for="b"></label><br/>
-        <input class="check1" type="checkbox" name="checkbox" value="3">
-        <label class="check" for="g"></label><br/>
-        <input class="check1" type="checkbox" name="checkbox" value="4">
-        <label class="check" for="b"></label><br/>
-      </div>
-    
+          <input class="check1" type="checkbox" id="c1" value="0">
+          <label class="check" for="c1"></label><br/>
+          <input class="check1" type="checkbox" id="c2" value="1">
+          <label class="check" for="c2"></label><br/>
+          <input class="check1" type="checkbox" id="c3" value="2">
+          <label class="check" for="c3"></label><br/>
+          <input class="check1" type="checkbox" id="c4" value="3">
+          <label class="check" for="c4"></label><br/>
+          <input class="check1" type="checkbox" id="c5" value="4">
+          <label class="check" for="c5"></label><br/>
+        </div>
+
         <div class="resultado"></div>
       </div>
 
-      
+
       <div class="impar">
         <h2 id="p8"></h2>
         <div class="ajustador">
-        <input class="check3" type="checkbox" id="r" value="red">
-        <label class="check2" for="r"></label><br/>
-        <input class="check3" type="checkbox" id="g" value="green">
-        <label class="check2" for="g"></label><br/>
-        <input class="check3" type="checkbox" id="b" value="blue">
-        <label class="check2" for="b"></label><br/>
-        <input class="check3" type="checkbox" id="g" value="green">
-        <label class="check2" for="g"></label><br/>
-        <input class="check3" type="checkbox" id="b" value="blue">
-        <label class="check2" for="b"></label><br/>
-      </div>
+          <input class="check3" type="checkbox" id="c6" value="0">
+          <label class="check2" for="c6"></label><br/>
+          <input class="check3" type="checkbox" id="c7" value="1">
+          <label class="check2" for="c7"></label><br/>
+          <input class="check3" type="checkbox" id="c8" value="2">
+          <label class="check2" for="c8"></label><br/>
+          <input class="check3" type="checkbox" id="c9" value="3">
+          <label class="check2" for="c9"></label><br/>
+          <input class="check3" type="checkbox" id="c10" value="4">
+          <label class="check2" for="c10"></label><br/>
+        </div>
         <div class="resultado"></div>
 
       </div>
       <div class="impar">
         <h2 id="p9"></h2>
         <div class="ajustador">
-        <input class="radior" id="red" type="radio" name="color" value="0">
-        <label class="radio" for="red"></label><br/>
-        <input class="radior" id="green" type="radio" name="color" value="1">
-        <label class="radio" for="green"></label><br/>
-        <input class="radior" id="blue" type="radio" name="color" value="2">
-        <label class="radio" for="blue"></label><br/>
-        <input class="radior" id="blue" type="radio" name="color" value="3">
-        <label class="radio" for="blue"></label><br/>
-      </div>
+          <input class="radior" id="r1" type="radio" name="rc" value="0">
+          <label class="radio" for="r1"></label><br/>
+          <input class="radior" id="r2" type="radio" name="rc" value="1">
+          <label class="radio" for="r2"></label><br/>
+          <input class="radior" id="r3" type="radio" name="rc" value="2">
+          <label class="radio" for="r3"></label><br/>
+          <input class="radior" id="r4" type="radio" name="rc" value="3">
+          <label class="radio" for="r4"></label><br/>
+        </div>
         <div class="resultado"></div>
       </div>
       <div class="impar">
         <h2 id="p10"></h2>
         <div class="ajustador">
-        <input class="radior2" id="red" type="radio" name="color1" value="0">
-        <label class="radio2" for="red"></label><br/>
-        <input class="radior2" id="green" type="radio" name="color1" value="1">
-        <label class="radio2" for="green"></label><br/>
-        <input class="radior2" id="blue" type="radio" name="color1" value="2">
-        <label class="radio2" for="blue"></label><br/>
-        <input class="radior2" id="blue" type="radio" name="color1" value="3">
-        <label class="radio2" for="blue"></label><br/>
-        <input class="radior2" id="blue" type="radio" name="color1" value="4">
-        <label class="radio2" for="blue"></label><br/>
-      </div>
+          <input class="radior2" id="r5" type="radio" name="rc1" value="0">
+          <label class="radio2" for="r5"></label><br/>
+          <input class="radior2" id="r6" type="radio" name="rc1" value="1">
+          <label class="radio2" for="r6"></label><br/>
+          <input class="radior2" id="r7" type="radio" name="rc1" value="2">
+          <label class="radio2" for="r7"></label><br/>
+          <input class="radior2" id="r8" type="radio" name="rc1" value="3">
+          <label class="radio2" for="r8"></label><br/>
+          <input class="radior2" id="r9" type="radio" name="rc1" value="4">
+          <label class="radio2" for="r9"></label><br/>
+        </div>
         <div class="resultado"></div>
       </div>
 
       <button class="boton" onclick="resolver1()">Corregir</button>
       
+
       <div id="contador"></div>
-
+    </form>
   </div>
 
 
 
 
 
-  </form>
-  </div>
 
 
-  <body>
-    <html>
+
+
+</body>
+    </html>
