@@ -1,7 +1,6 @@
 {
   "questions": {
-    "question": [
-      {
+    "question": [{
         "-id": "profe001",
         "type": "text",
         "title": "¿ A qué asignatura nos referimmos si hablamos de SQL ?",

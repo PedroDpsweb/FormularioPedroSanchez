@@ -2,7 +2,7 @@ var r1 = [];
 var r2 = [];
 var solucionesc2 = [];
 var r3 = [];
-var rm=[];
+var rm = [];
 
 
 
@@ -61,7 +61,7 @@ window.onload = function () {
 
         //opt.value = i + 1;
         opt.value = i;
-        opt.setAttribute("class","multiple");
+        opt.setAttribute("class", "multiple");
         opt.text = object.questions.question[inicio].option[i];
         sel.appendChild(opt);
       }
@@ -132,7 +132,7 @@ window.onload = function () {
       r3.push(object.questions.question[j].answer);
     }
 
-    for (k=4;k<6;k++){
+    for (k = 4; k < 6; k++) {
       rm.push(object.questions.question[k].answer);
     }
 
@@ -159,12 +159,12 @@ window.onload = function () {
         var comparar2 = object.questions.question[i].answer;
         if (comparar1 == comparar2) {
           document.getElementsByClassName("resultado")[i].style.backgroundColor = "green";
-        }else {
+        } else {
           document.getElementsByClassName("resultado")[i].style.backgroundColor = "red";
         }
 
       }
-      
+
 
 
       //if()
@@ -196,11 +196,12 @@ function resolver1() {
   var fallocheck = 0;
   var aciertocheck1 = 0;
   var fallocheck1 = 0;
-  var aciertomul=0;
-  var aciertomul2=0;
-  var fallomul=0;
-  var fallomul2=2;
-  var sincontestar=false;
+  var aciertomul = 0;
+  var aciertomul2 = 0;
+  var fallomul = 0;
+  var fallomul2 = 0;
+  var sincontestar = false;
+
 
   for (var i = 0; i < 4; i++) {
     var hola = document.getElementsByClassName("respuesta")[i].value;
@@ -210,11 +211,12 @@ function resolver1() {
       document.getElementsByClassName("resultado")[i].style.backgroundColor = "green";
       contador++;
 
-    }  else if(comparar1==null){
-      document.getElementsByClassName("resultado")[i].style.backgroundColor = "black";
-      sincontestar=true;
-    }else {
+    } else if (comparar1 != adios) {
       document.getElementsByClassName("resultado")[i].style.backgroundColor = "red";
+
+    } else {
+      document.getElementsByClassName("resultado")[i].style.backgroundColor = "black";
+      sincontestar = true;
 
     }
 
@@ -223,113 +225,113 @@ function resolver1() {
   }
   //MULTIPLE
   for (var i = 10; i < 15; i++) {
-    var stoyaqui=document.getElementsByClassName("multiple")[i].innerHTML;
-    var seleccionado=document.getElementsByClassName("multiple")[i].selected;
-    if (seleccionado ==true){
+    var stoyaqui = document.getElementsByClassName("multiple")[i].innerHTML;
+    var seleccionado = document.getElementsByClassName("multiple")[i].selected;
+    if (seleccionado == true) {
       var comparar1 = document.getElementsByClassName("multiple")[i].value;
       var comparar2 = rm[0].indexOf(comparar1);
       if (comparar1 == comparar2) {
         aciertomul++;
       } else {
-        
+
         fallomul++;
       }
     }
-    
-    
+
+
 
   }
 
   if (aciertomul == 3 && fallomul == 0) {
     document.getElementsByClassName("resultado")[4].style.backgroundColor = "green";
     contador++;
-  } else if(comparar1==null){
+  } else if (comparar1 == null) {
     document.getElementsByClassName("resultado")[4].style.backgroundColor = "black";
-    sincontestar=true;
-  }else {
+    sincontestar = true;
+  } else {
     document.getElementsByClassName("resultado")[4].style.backgroundColor = "red";
   }
 
   //MULTIPLE2
   for (var i = 15; i < 20; i++) {
-    var stoyaqui=document.getElementsByClassName("multiple")[i].innerHTML;
-    var seleccionado=document.getElementsByClassName("multiple")[i].selected;
-    if (seleccionado ==true){
+    var stoyaqui = document.getElementsByClassName("multiple")[i].innerHTML;
+    var seleccionado = document.getElementsByClassName("multiple")[i].selected;
+    if (seleccionado == true) {
       var comparar1 = document.getElementsByClassName("multiple")[i].value;
       var comparar2 = rm[0].indexOf(comparar1);
       if (comparar1 == comparar2) {
         aciertomul2++;
       } else {
-        
+
         fallomul2++;
       }
     }
-    
-    
+
+
 
   }
 
   if (aciertomul2 == 3 && fallomul2 == 0) {
     document.getElementsByClassName("resultado")[5].style.backgroundColor = "green";
     contador++;
-  } else if(comparar1==null){
+  } else if (comparar1 == null) {
     document.getElementsByClassName("resultado")[5].style.backgroundColor = "black";
-    sincontestar=true;
-  }else {
+    sincontestar = true;
+  } else {
     document.getElementsByClassName("resultado")[5].style.backgroundColor = "red";
   }
   //radiobutton1
   for (var i = 0; i < 4; i++) {
-    var xec=document.getElementsByClassName("radior")[i].checked;
-    
-    
+    var xec = document.getElementsByClassName("radior")[i].checked;
 
-    if(xec==true){
+
+
+    if (xec == true) {
       var hola = document.getElementsByClassName("radior")[i].value;
       var adios = r3[0];
       if (hola == adios) {
         document.getElementsByClassName("resultado")[8].style.backgroundColor = "green";
         contador++;
-  
+
       } else {
         document.getElementsByClassName("resultado")[8].style.backgroundColor = "red";
-  
+
       }
-  
+
     }
 
-    
+
 
 
   }
 
   //radiobutton2
   for (var i = 0; i < 5; i++) {
-    var xec=document.getElementsByClassName("radior2")[i].checked;
-    
-    
+    var xec = document.getElementsByClassName("radior2")[i].checked;
 
-    if(xec==true){
+
+
+    if (xec == true) {
       var hola = document.getElementsByClassName("radior2")[i].value;
       var adios = r3[1];
       if (hola == adios) {
         document.getElementsByClassName("resultado")[9].style.backgroundColor = "green";
         contador++;
-  
+
       } else {
         document.getElementsByClassName("resultado")[9].style.backgroundColor = "red";
-  
+
       }
-  
+
     }
 
-    
+
 
 
   }
 
 
-  //chechbox1
+  //checkbox1
   for (var i = 0; i < 5; i++) {
     var resp = document.getElementsByClassName("check1")[i].checked;
     var resp0 = document.getElementsByClassName("check1")[i].value;
@@ -347,10 +349,10 @@ function resolver1() {
     if (aciertocheck == 3 && fallocheck == 0) {
       document.getElementsByClassName("resultado")[6].style.backgroundColor = "green";
       contador++;
-    } else if(comparar1==null){
+    } else if (comparar1 == null) {
       document.getElementsByClassName("resultado")[i].style.backgroundColor = "black";
-      sincontestar=true;
-    }else {
+      sincontestar = true;
+    } else {
       document.getElementsByClassName("resultado")[6].style.backgroundColor = "red";
     }
 
@@ -371,27 +373,29 @@ function resolver1() {
       if (aciertocheck1 == 2 && fallocheck1 == 0) {
         document.getElementsByClassName("resultado")[7].style.backgroundColor = "green";
         contador++;
-      } else if(comparar1==null){
+      } else if (comparar1 == null) {
         document.getElementsByClassName("resultado")[i].style.backgroundColor = "black";
-        sincontestar=true;
-      }else {
+        sincontestar = true;
+      } else {
         document.getElementsByClassName("resultado")[7].style.backgroundColor = "red";
+
       }
-  
+
     }
 
-    
+
 
   }
 
-if(sincontestar==true){
-  document.getElementById("contador").innerHTML = "Contesta todas las preguntas por favor"
-}else{
-  document.getElementById("contador").innerHTML = "Respuestas correctas : "+contador;
-}
+  if (sincontestar == true) {
+    document.getElementById("contador").innerHTML = "Contesta todas las preguntas por favor"
+  } else {
+    document.getElementById("contador").innerHTML = "NOTA: " + contador;
+
+  }
 
 
-  
+
 
 
 
