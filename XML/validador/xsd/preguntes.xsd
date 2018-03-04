@@ -1,0 +1,22 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="preguntes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="pregunta" maxOccurs="unbounded" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>0, 1, 2  0, 1, 2</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="tipus"/>
+              <xs:element type="xs:string" name="text"/>
+              <xs:element type="xs:string" name="opcio" maxOccurs="unbounded" minOccurs="0"/>
+              <xs:element type="xs:string" name="resposta"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="id" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
